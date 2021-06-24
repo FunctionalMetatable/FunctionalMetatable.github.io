@@ -1,78 +1,61 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        site
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
+  <div class="main m-0">
+    <div class="m-0 shadow-2xl grid col">
+      <br />
+      <br />
+      <h1 class="text-4xl ml-28">Hey, I'm</h1>
+      <h2 class="font-bold text-5xl ml-28 cursor-pointer">
+        <a @click="change()">{{ type }}</a>
+      </h2>
+
+      <hr class="w-12 h-1 bg-blue-800 rounded-full ml-28 mt-8" />
+      <h3 class="text-2xl font-semibold text-gray-700 ml-28">
+        {{ devText }}
+      </h3>
+      <hr class="w-12 h-1 bg-blue-800 rounded-full ml-28 mt-8" />
+      <h3 class="text-md font-semibold text-gray-700 ml-28">
+        I have {{ repoCount }} repositories on my GitHub.
+        <a href="https://github.com/FunctionalMetatable" class="text-blue-700"
+          >Check it out!</a
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      </h3>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      type: "FunctionalMetatable",
+      devText: "A beginner web dev.",
+      repoCount: 0,
+    };
+  },
+  methods: {
+    change() {
+      this.type = this.type == "9gr" ? "FunctionalMetatable" : "9gr";
+      this.devText =
+        this.type == "9gr"
+          ? "Advanced Topics Forumer on Scratch"
+          : "A beginner web dev.";
+    },
+  },
+  async fetch() {
+    let res = await fetch(`${process.env.api}/gh/user/FunctionalMetatable`);
+    let json = await res.json();
+
+    this.repoCount = json.public_repos;
+  },
+  fetchOnServer: false,
+};
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

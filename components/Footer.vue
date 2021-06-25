@@ -1,7 +1,7 @@
 <template>
   <div class="shadow-3xl bg-blue-800">
     <div class="m-0">
-      <div class="bottom m-10">
+      <div class="bottom p-10">
         <p class="text-purple-50">
           Copyright &copy; FunctionalMetatable 2021. All Rights Reserved.
           <br />

@@ -14,7 +14,7 @@
     For example, to show the 4k rickroll,
     <br />
     <code>
-      https://jpme9.sse.codesandbox.io/projects/fullscreen-youtube-player/play?v=Lrj2Hq7xqQ8</code
+      https://FunctionalMetatable.github.io/projects/fullscreen-youtube-player/play?v=Lrj2Hq7xqQ8</code
     >
   </div>
 </template>

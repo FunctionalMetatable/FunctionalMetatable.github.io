@@ -3,4 +3,4 @@ title: Hello World!
 description: My first blog post
 ---
 
-Hi!
+Welcome to the blog!

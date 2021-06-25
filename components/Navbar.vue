@@ -24,6 +24,10 @@ export default {
           name: "Blog",
           link: "/blog",
         },
+        {
+          name: "Projects",
+          link: "/projects",
+        },
       ],
     };
   },

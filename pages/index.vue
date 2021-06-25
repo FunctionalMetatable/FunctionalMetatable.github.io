@@ -38,7 +38,7 @@ export default {
     return {
       type: "FunctionalMetatable",
       devText: "A beginner web dev.",
-      repoCount: 0,
+      repoCount: 0
     };
   },
   methods: {
@@ -48,7 +48,7 @@ export default {
         this.type == "9gr"
           ? "Advanced Topics Forumer on Scratch"
           : "A beginner web dev.";
-    },
+    }
   },
   async fetch() {
     let res = await fetch(`${process.env.api}/gh/user/FunctionalMetatable`);
@@ -56,6 +56,6 @@ export default {
 
     this.repoCount = json.public_repos;
   },
-  fetchOnServer: false,
+  fetchOnServer: false
 };
 </script>

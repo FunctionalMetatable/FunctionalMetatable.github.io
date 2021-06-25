@@ -38,6 +38,7 @@ jobs:
           echo Starting to install dependencies
           npm install
           echo Generating Nuxt.js site..
+          npm run generate
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.8.0

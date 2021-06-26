@@ -3,6 +3,9 @@
     :src="`https://youtube.com/embed/${id}?autoplay=true`"
     :width="width"
     :height="height"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
   ></iframe>
 </template>
 <script>
@@ -17,7 +20,7 @@ export default {
     return {
       width: 100,
       height: 100,
-      id: this.$route.query.v || "Lrj2Hq7xqQ8",
+      id: this.$route.query.v || "dQw4w9WgXcQ",
     };
   },
   mounted() {

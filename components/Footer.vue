@@ -3,7 +3,7 @@
     <div class="m-0">
       <div class="bottom p-10">
         <p class="text-purple-50">
-          Copyright &copy; FunctionalMetatable 2021. All Rights Reserved.
+          Copyright &copy; FunctionalMetatable 2021. All Rights Reserved unless noted.
           <br />
           <br />
           <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex icons align-right">
@@ -52,11 +52,10 @@
                     fill="#1e40af"
                   />
                 </g>
-              </g>
-            </svg>
-          </a>
+               </g>
+              </svg>
+            </a>
           </div>
-          <br />
         </p>
       </div>
     </div>

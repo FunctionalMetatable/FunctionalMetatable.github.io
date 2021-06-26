@@ -46,5 +46,9 @@ export default {
 
   env: {
     api: process.env.backendURL || "https://api-9gr.vercel.app"
+  },
+
+  generate: {
+    fallback: "404.html"
   }
 };

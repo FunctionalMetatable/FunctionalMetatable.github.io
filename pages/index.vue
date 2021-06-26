@@ -7,7 +7,7 @@
       <h2 class="font-bold text-5xl ml-28 cursor-pointer">
         <a @click="change()">{{ type }}</a>
       </h2>
-      <p class="text-2xl text-gray-200 ml-28">A beginner web dev</p>
+      <p class="text-2xl text-gray-500 ml-28">A beginner web dev</p>
       <br />
       <br />
       <br />
@@ -18,6 +18,13 @@
     <br />
     <br />
     <br />
+    <div class="content p-10">
+      <h1
+        class="text-3xl align-right text-blue-800 font-semibold leading-8 sm:text-4xl mt-2"
+      >
+        Welcome to my site!
+      </h1>
+    </div>
   </div>
 </template>
 

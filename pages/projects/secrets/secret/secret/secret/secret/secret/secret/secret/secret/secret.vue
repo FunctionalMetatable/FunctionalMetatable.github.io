@@ -1,12 +1,5 @@
 <template>
-  <iframe
-    :src="`https://youtube.com/embed/kbQS-rLmJv4?autoplay=true`"
-    :width="width"
-    :height="height"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
+<p>:)</p>
 </template>
 <script>
 export default {
@@ -23,17 +16,7 @@ export default {
     };
   },
   mounted() {
-    let _this = this;
-    function resize() {
-      _this.width = window.innerWidth;
-      _this.height = window.innerHeight;
-    }
-    window.addEventListener("resize", resize);
-    resize();
+    window.location.href = 'https://youtube.com/embed/kbQS-rLmJv4?autoplay'
   },
 };
 </script>
-<style>
-body {
-  overflow: hidden;
-}
